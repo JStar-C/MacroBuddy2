@@ -1,4 +1,3 @@
-
 <html>
   <head>
       <link rel="stylesheet" href="macro_buddy.css" />
@@ -37,44 +36,17 @@
        </div>
     </nav>
 
-    <div class="container">
-      <div class="container text-center">
-        <img class="img-fluid" src="diagrams/sequence_1.jpg" width="750">
-        <br>
-      </div>
-      <br>
-      <div class="container">
-        <h4><b>Function 1 Sequence Diagram:</b></h4>
-        <p>This sequence diagram shows how the MB2 will record user input and generate a Macro.
-When the user selects the record button for the first time, MB2 will start recording the
-Terminal Emulator (T.E). When the user presses the record button again, the recording will
-stop. Between the start and stop of recording is where the user will enter the
-input(commands). While recording, MB2 will set isRecording status to True(1). Otherwise, it
-will set isRecording status to False(0). After the recording is stopped, MB2 will get the input
-using getInput() and the Record class will process the input and generate a file which contains
-the commands which can be accessed and executed later on. MB2 will now ask for a location
-where the macro can be saved, then saves it there. Then, a macro will be generated. This
-macro will contain the information about the file’s location. Finally, the record will send a
-success/failure message.</p>
-      </div>
-
-      <br>
-
-      <div class="container text-center">
-        <img class="img-fluid" src="diagrams/sequence_2.jpg" width="750">
-      </div>
-      <br>
-      <div class="container">
-        <h4><b>Function 2 Sequence Diagram: </b></h4>
-        <p>The second sequence diagram shows the function of how MB2 loads a macro chosen by
-the user and executes it. When the user selects a Macro MB2 will run the
-execute(macroButton) function. In this function, macroButton will load a macro which will
-then fetch for the executable file in a location. Then it will run this file in the runMacro(file)
-function. This will print out all the commands onto the Terminal Emulator. After completion,
-there will be a success or failure message. This message will depend on return value of the
-execute(macroButton) function which is Success or Failure. </p>
-      </div>
-
+    <div class="container text-center">
+      <img class="img-fluid" src="diagrams/stateDiagram.jpg" width="750">
     </div>
+    <br>
+    <div class="container">
+      <h4><b>State Diagram:</b></h4>
+      <p>This diagram shows the expected states in the MB2 application and the order in which
+the MB2 application goes into these states. On the left, a recording sequence is illustrated; on
+the right, an execute sequence is illustrated. Many of these states are automated except for
+when capturing the user’s input during the “recording” state. </p>
+    </div>
+
   </body>
 </html>
